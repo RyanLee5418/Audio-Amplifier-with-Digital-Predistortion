@@ -1,0 +1,12 @@
+;UCD BS170 MOSFET Model. 
+;All values obtained from empirical optimization on a BS170 device using E5270A DC source
+;J. King, Jan 2014.
+
+.model BS170 NMOS (Level=3 W=200u L=1u Tox=7.03706e-008  ; dimensions
++  Vto=2.21152 Kp=2.71454E-4 Vmax=0 Uo=700 Phi=0.89947 NSUB=4.90501e+014 NFS=1.25926E12    ; Beta=0.08     
++  Gamma=0.0825084 Delta=0 Eta=0 Theta=0 Kappa=0.0156724   ; empirical parameters
++  Rg=0 Rs=0 Rd=0.0 Rb=0 Rds=50e9              ; series and leakage resistances
++  Cgso=140n Cgdo=10n Cgbo=10n Cbd=100p Cj=2e-4 Cjsw=1n  ; capacitance factors
++  Is=1.00795e-014 N=0.576832 Pb=.8 )              ; body diode parameters
+
+;+  Rg=500 Rs=0 Rd=0.5 Rb=0 Rds=50e6              ; series and leakage resistances
