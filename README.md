@@ -1,0 +1,6 @@
+# Audio-Amplifier-with-Digital-Predistortion
+ Designed an audio amplifier system with digital predistortion(DPD), where the DPD system introduces inverse nonlinear distortion to the input audio signal, thereby offsetting the distortion of the signal in the nonlinear amplifier, reducing the distortion rate and improving the overall audio fidelity.
+
+# Overview
+The research first establishes corresponding coefficient models for the original audio amplifier and the DPD system. According to the logic-mathematical relationship between the input signal and the system coefficient model, the digital predistortion technology is explored. In order to solve the problem of high-frequency distortion, up-sampling
+processing is used to increase the sampling rate of the input audio signal. This step significantly improves the accuracy of the predistortion and improves the quality of the output signal. The audio amplifier circuit is designed with a Class A amplifier circuit. The software simulation test is carried out using MATLAB and LTspice software to verify the proposed DPD system and class A amplifier circuit. Experimental results show that the sixth-order DPD system has a better predistortion effect than the initial fourth-order DPD coefficient model. The designed class A amplifier circuit has a stable voltage gain.
