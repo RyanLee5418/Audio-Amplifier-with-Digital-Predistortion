@@ -20,15 +20,15 @@ The block diagram of an audio amplifier system with DPD is shown below:
 
 The simulation result of the amplifier circuit in LTspice in shown below:
 
-<div align = center><img src="result8.png" width="650">
+<div align = center><img src="result8.png" width="700">
 <div align = left >
 
 According to the above results, the voltage amplification gain of the amplifier circuit is about 10, and the voltage gain curve shows the characteristic of saturation gain at a very low frequency. From 100mHz to 1Hz, the voltage gain continues to increase with a large slope. Near the signal frequency of 1Hz, the voltage gain has almost reached the saturation gain value. And in the subsequent continuously increasing signal frequency, the almost stable voltage gain of about 10 is consistently maintained. The above simulation results show that this class A audio amplifier circuit can well implement the amplification effect of the input signal, and can maintain the set voltage amplification gain of 10 in almost the entire frequency range. The design of the audio amplifier circuit in this project is successfully implemented at the software level.
 
 2. The time domain check and frequency domain check between original audio amplifier and amplifier with DPD in system pretest:
 
-<div align = center><img src="result6.png" width="500">
-<img src="result7.png" width="500">
+<div align = center><img src="result6.png" width="450">
+<img src="result7.png" width="450">
 <div align = left >
 According to the time domain figure, it can be seen that the output signal of the ideal linear amplifier is a straight line with a fixed slope, which indicates that the input signal does not undergo any distortion after passing through the ideal linear amplifier. However, the output signal of the audio amplifier system with DPD has a slight change in the slope of the part, but the waveform basically coincides with that of the ideal amplifier, which shows that the distortion of the signal is very small. However, the output signal of the original amplifier shows obvious slope changes and bends in the time domain waveform, which is quite different from the output waveform of the ideal linear amplifier. This shows that after the input signal directly enters the amplifier without predistortion, the signal has obvious distortion problems. By calculating the R-square value (Coefficient of determination) of the time-domain waveforms of the three system results, the R-square value between the output of the audio amplifier with DPD and the output of the ideal linear amplifier is 0.9991, which is higher than the R-square value between the output of the original amplifier and the output of the ideal linear amplifier 0.9833.
 
@@ -38,6 +38,6 @@ As can be seen from the frequency domain figure above, the audio amplifier syste
 3. The frequency spectra of the original input audio signal, the output signal of the original amplifier and the output signal of the audio amplifier system with DPD in real audio signal testing:
 
 
-<div align = center><img src="result2.png" width="500">
+<div align = center><img src="result2.png" width="650">
 <div align = left >
 According to the figure, it can be seen that after the upsampled real audio signal is processed by the audio amplifier system with DPD, there is almost no signal added to the frequency spectrum, which is highly consistent with the original input audio frequency spectrum, and the amplitude has been amplified. However, the output signal of the original amplifier has a large number of newly added frequency signals, and the content of the signal components of these new frequencies cannot be ignored. These new signals are the nonlinear distortion obtained after the input signal is processed by the original amplifier. 
